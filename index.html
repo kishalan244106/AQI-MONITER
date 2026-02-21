@@ -18,266 +18,79 @@
         box-sizing: border-box;
         margin: 0;
         padding: 0;
-        font-family:
-          system-ui,
-          -apple-system,
-          Segoe UI,
-          Roboto,
-          Arial;
+        font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial;
       }
       body {
-        background:
-          radial-gradient(
-            1200px 700px at 20% -10%,
-            rgba(87, 214, 255, 0.25),
-            transparent 60%
-          ),
-          radial-gradient(
-            900px 600px at 90% 0%,
-            rgba(44, 229, 167, 0.18),
-            transparent 55%
-          ),
+        background: radial-gradient(1200px 700px at 20% -10%, rgba(87, 214, 255, 0.25), transparent 60%),
+          radial-gradient(900px 600px at 90% 0%, rgba(44, 229, 167, 0.18), transparent 55%),
           var(--bg);
         color: var(--text);
         min-height: 100vh;
         padding: 24px;
       }
-      .wrap {
-        max-width: 1100px;
-        margin: 0 auto;
-      }
+      .wrap { max-width: 1100px; margin: 0 auto; }
       header {
-        display: flex;
-        gap: 16px;
-        align-items: center;
-        justify-content: space-between;
-        flex-wrap: wrap;
-        padding: 18px;
-        border: 1px solid var(--border);
-        background: rgba(17, 26, 46, 0.72);
-        backdrop-filter: blur(10px);
-        border-radius: 18px;
-        box-shadow: 0 12px 30px rgba(0, 0, 0, 0.35);
+        display: flex; gap: 16px; align-items: center; justify-content: space-between; flex-wrap: wrap;
+        padding: 18px; border: 1px solid var(--border); background: rgba(17, 26, 46, 0.72);
+        backdrop-filter: blur(10px); border-radius: 18px; box-shadow: 0 12px 30px rgba(0, 0, 0, 0.35);
       }
-      .title {
-        display: flex;
-        flex-direction: column;
-        gap: 6px;
-      }
-      .title h1 {
-        font-size: 20px;
-      }
-      .title p {
-        color: var(--muted);
-        font-size: 13px;
-      }
-      .right {
-        display: flex;
-        gap: 10px;
-        align-items: center;
-        flex-wrap: wrap;
-      }
+      .title { display: flex; flex-direction: column; gap: 6px; }
+      .title h1 { font-size: 20px; }
+      .title p { color: var(--muted); font-size: 13px; }
+      .right { display: flex; gap: 10px; align-items: center; flex-wrap: wrap; }
       .pill {
-        padding: 8px 12px;
-        border-radius: 999px;
-        border: 1px solid var(--border);
-        background: rgba(255, 255, 255, 0.04);
-        color: var(--muted);
-        font-size: 12px;
-        display: flex;
-        gap: 8px;
-        align-items: center;
+        padding: 8px 12px; border-radius: 999px; border: 1px solid var(--border);
+        background: rgba(255, 255, 255, 0.04); color: var(--muted); font-size: 12px;
+        display: flex; gap: 8px; align-items: center;
       }
-      .dot {
-        width: 9px;
-        height: 9px;
-        border-radius: 50%;
-        background: var(--warn);
-        box-shadow: 0 0 0 4px rgba(255, 211, 106, 0.15);
-      }
-      .dot.ok {
-        background: var(--good);
-        box-shadow: 0 0 0 4px rgba(44, 229, 167, 0.14);
-      }
-      .dot.bad {
-        background: var(--bad);
-        box-shadow: 0 0 0 4px rgba(255, 107, 107, 0.14);
-      }
+      .dot { width: 9px; height: 9px; border-radius: 50%; background: var(--warn); box-shadow: 0 0 0 4px rgba(255, 211, 106, 0.15); }
+      .dot.ok { background: var(--good); box-shadow: 0 0 0 4px rgba(44, 229, 167, 0.14); }
+      .dot.bad { background: var(--bad); box-shadow: 0 0 0 4px rgba(255, 107, 107, 0.14); }
 
-      main {
-        margin-top: 18px;
-        display: grid;
-        gap: 14px;
-      }
-      .grid {
-        display: grid;
-        grid-template-columns: repeat(12, 1fr);
-        gap: 14px;
-      }
+      main { margin-top: 18px; display: grid; gap: 14px; }
+      .grid { display: grid; grid-template-columns: repeat(12, 1fr); gap: 14px; }
       .card {
-        grid-column: span 4;
-        border: 1px solid var(--border);
-        background: rgba(17, 26, 46, 0.72);
-        backdrop-filter: blur(10px);
-        border-radius: 18px;
-        padding: 16px;
-        box-shadow: 0 10px 24px rgba(0, 0, 0, 0.28);
-        position: relative;
-        overflow: hidden;
+        grid-column: span 4; border: 1px solid var(--border); background: rgba(17, 26, 46, 0.72);
+        backdrop-filter: blur(10px); border-radius: 18px; padding: 16px;
+        box-shadow: 0 10px 24px rgba(0, 0, 0, 0.28); position: relative; overflow: hidden;
       }
       .card::before {
-        content: "";
-        position: absolute;
-        inset: -1px;
-        background: linear-gradient(
-          120deg,
-          rgba(87, 214, 255, 0.18),
-          transparent 35%,
-          rgba(44, 229, 167, 0.14)
-        );
-        opacity: 0.9;
-        pointer-events: none;
+        content: ""; position: absolute; inset: -1px;
+        background: linear-gradient(120deg, rgba(87, 214, 255, 0.18), transparent 35%, rgba(44, 229, 167, 0.14));
+        opacity: 0.9; pointer-events: none;
       }
-      .card > * {
-        position: relative;
-      }
-      .card h3 {
-        font-size: 13px;
-        color: var(--muted);
-        font-weight: 650;
-        margin-bottom: 10px;
-      }
-      .value {
-        font-size: 30px;
-        font-weight: 800;
-        display: flex;
-        align-items: baseline;
-        gap: 10px;
-      }
-      .unit {
-        font-size: 12px;
-        color: var(--muted);
-        font-weight: 650;
-      }
-      .sub {
-        margin-top: 10px;
-        color: var(--muted);
-        font-size: 12px;
-        display: flex;
-        justify-content: space-between;
-        gap: 10px;
-        flex-wrap: wrap;
-      }
-      .sub b {
-        color: var(--text);
-      }
-      .wide {
-        grid-column: span 12;
-      }
-      .row {
-        display: flex;
-        gap: 12px;
-        flex-wrap: wrap;
-      }
-      .mini {
-        flex: 1;
-        min-width: 180px;
-        padding: 12px 14px;
-        border-radius: 14px;
-        border: 1px solid var(--border);
-        background: rgba(255, 255, 255, 0.04);
-      }
-      .mini .k {
-        font-size: 12px;
-        color: var(--muted);
-        margin-bottom: 6px;
-      }
-      .mini .v {
-        font-size: 18px;
-        font-weight: 800;
-      }
+      .card > * { position: relative; }
+      .card h3 { font-size: 13px; color: var(--muted); font-weight: 650; margin-bottom: 10px; }
+      .value { font-size: 30px; font-weight: 800; display: flex; align-items: baseline; gap: 10px; }
+      .unit { font-size: 12px; color: var(--muted); font-weight: 650; }
+      .sub { margin-top: 10px; color: var(--muted); font-size: 12px; display: flex; justify-content: space-between; gap: 10px; flex-wrap: wrap; }
+      .sub b { color: var(--text); }
+      .wide { grid-column: span 12; }
+      .row { display: flex; gap: 12px; flex-wrap: wrap; }
+      .mini { flex: 1; min-width: 180px; padding: 12px 14px; border-radius: 14px; border: 1px solid var(--border); background: rgba(255, 255, 255, 0.04); }
+      .mini .k { font-size: 12px; color: var(--muted); margin-bottom: 6px; }
+      .mini .v { font-size: 18px; font-weight: 800; }
 
-      /* ✅ VOC-only Air Quality row (ADDED) */
       .aq {
-        display: flex;
-        gap: 12px;
-        align-items: center;
-        justify-content: space-between;
-        flex-wrap: wrap;
-        padding: 14px 16px;
-        border-radius: 18px;
-        border: 1px solid var(--border);
-        background: rgba(17, 26, 46, 0.72);
-        backdrop-filter: blur(10px);
-        box-shadow: 0 10px 24px rgba(0, 0, 0, 0.28);
+        display: flex; gap: 12px; align-items: center; justify-content: space-between; flex-wrap: wrap;
+        padding: 14px 16px; border-radius: 18px; border: 1px solid var(--border);
+        background: rgba(17, 26, 46, 0.72); backdrop-filter: blur(10px); box-shadow: 0 10px 24px rgba(0, 0, 0, 0.28);
       }
-      .aqLeft {
-        display: flex;
-        flex-direction: column;
-        gap: 4px;
-      }
-      .aqLeft .t {
-        color: var(--muted);
-        font-size: 12px;
-      }
-      .aqLeft .big {
-        font-size: 18px;
-        font-weight: 850;
-      }
-      .badge {
-        padding: 8px 12px;
-        border-radius: 999px;
-        border: 1px solid var(--border);
-        background: rgba(255, 255, 255, 0.04);
-        font-size: 12px;
-        font-weight: 850;
-        display: flex;
-        align-items: center;
-        gap: 8px;
-      }
-      .badgeDot {
-        width: 10px;
-        height: 10px;
-        border-radius: 50%;
-      }
-      .badge.good {
-        color: var(--good);
-      }
-      .badge.good .badgeDot {
-        background: var(--good);
-        box-shadow: 0 0 0 4px rgba(44, 229, 167, 0.14);
-      }
-      .badge.warn {
-        color: var(--warn);
-      }
-      .badge.warn .badgeDot {
-        background: var(--warn);
-        box-shadow: 0 0 0 4px rgba(255, 211, 106, 0.14);
-      }
-      .badge.bad {
-        color: var(--bad);
-      }
-      .badge.bad .badgeDot {
-        background: var(--bad);
-        box-shadow: 0 0 0 4px rgba(255, 107, 107, 0.14);
-      }
+      .aqLeft { display: flex; flex-direction: column; gap: 4px; }
+      .aqLeft .t { color: var(--muted); font-size: 12px; }
+      .aqLeft .big { font-size: 18px; font-weight: 850; }
+      .badge { padding: 8px 12px; border-radius: 999px; border: 1px solid var(--border); background: rgba(255, 255, 255, 0.04); font-size: 12px; font-weight: 850; display: flex; align-items: center; gap: 8px; }
+      .badgeDot { width: 10px; height: 10px; border-radius: 50%; }
+      .badge.good { color: var(--good); }
+      .badge.good .badgeDot { background: var(--good); box-shadow: 0 0 0 4px rgba(44, 229, 167, 0.14); }
+      .badge.warn { color: var(--warn); }
+      .badge.warn .badgeDot { background: var(--warn); box-shadow: 0 0 0 4px rgba(255, 211, 106, 0.14); }
+      .badge.bad { color: var(--bad); }
+      .badge.bad .badgeDot { background: var(--bad); box-shadow: 0 0 0 4px rgba(255, 107, 107, 0.14); }
 
-      footer {
-        margin-top: 2px;
-        color: var(--muted);
-        font-size: 12px;
-        text-align: center;
-      }
-      @media (max-width: 900px) {
-        .card {
-          grid-column: span 6;
-        }
-      }
-      @media (max-width: 620px) {
-        .card {
-          grid-column: span 12;
-        }
-      }
+      footer { margin-top: 2px; color: var(--muted); font-size: 12px; text-align: center; }
+      @media (max-width: 900px) { .card { grid-column: span 6; } }
+      @media (max-width: 620px) { .card { grid-column: span 12; } }
     </style>
   </head>
 
@@ -286,21 +99,15 @@
       <header>
         <div class="title">
           <h1>ESP32 Sensor Dashboard</h1>
-          <p>
-            Average Temp/Humidity + other sensor readings (VOC-only AQ added)
-          </p>
+          <p>Average Temp/Humidity + other sensor readings (VOC-only AQ added)</p>
         </div>
         <div class="right">
-          <div class="pill">
-            <span class="dot" id="statusDot"></span
-            ><span id="statusText">Starting…</span>
-          </div>
+          <div class="pill"><span class="dot" id="statusDot"></span><span id="statusText">Starting…</span></div>
           <div class="pill">Device: <b id="deviceId">device01</b></div>
           <div class="pill">Last update: <b id="lastUpdate">—</b></div>
         </div>
       </header>
 
-      <!-- ✅ ADDED: Air Quality row (VOC only) -->
       <div class="aq" style="margin-top: 16px">
         <div class="aqLeft">
           <div class="t">Air Quality (VOC only)</div>
@@ -310,21 +117,15 @@
         <div class="row">
           <div class="mini">
             <div class="k">VOC</div>
-            <div class="v">
-              <span id="aqVoc">—</span> <span class="unit">raw</span>
-            </div>
+            <div class="v"><span id="aqVoc">—</span> <span class="unit">raw</span></div>
           </div>
           <div class="mini">
             <div class="k">Baseline</div>
-            <div class="v">
-              <span id="aqBase">—</span> <span class="unit">raw</span>
-            </div>
+            <div class="v"><span id="aqBase">—</span> <span class="unit">raw</span></div>
           </div>
           <div class="mini">
             <div class="k">Ratio</div>
-            <div class="v">
-              <span id="aqRatio">—</span> <span class="unit">×</span>
-            </div>
+            <div class="v"><span id="aqRatio">—</span> <span class="unit">×</span></div>
           </div>
         </div>
 
@@ -336,12 +137,9 @@
 
       <main>
         <section class="grid">
-          <!-- Avg cards (no sensor names) -->
           <div class="card">
             <h3>Temperature (Average)</h3>
-            <div class="value">
-              <span id="avgTemp">—</span><span class="unit">°C</span>
-            </div>
+            <div class="value"><span id="avgTemp">—</span><span class="unit">°C</span></div>
             <div class="sub">
               <span>Sources used: <b id="tempSources">—</b></span>
               <span>Status: <b id="tempStatus">—</b></span>
@@ -350,9 +148,7 @@
 
           <div class="card">
             <h3>Humidity (Average)</h3>
-            <div class="value">
-              <span id="avgHum">—</span><span class="unit">%</span>
-            </div>
+            <div class="value"><span id="avgHum">—</span><span class="unit">%</span></div>
             <div class="sub">
               <span>Sources used: <b id="humSources">—</b></span>
               <span>Status: <b id="humStatus">—</b></span>
@@ -361,39 +157,26 @@
 
           <div class="card">
             <h3>CO₂</h3>
-            <div class="value">
-              <span id="co2">—</span><span class="unit">ppm</span>
-            </div>
-            <div class="sub">
-              <span>Sensor temp: <b id="co2Temp">—</b> °C</span>
-            </div>
+            <div class="value"><span id="co2">—</span><span class="unit">ppm</span></div>
+            <div class="sub"><span>Sensor temp: <b id="co2Temp">—</b> °C</span></div>
           </div>
 
           <div class="card">
             <h3>Rain</h3>
-            <div class="value">
-              <span id="rain">—</span><span class="unit">ADC</span>
-            </div>
+            <div class="value"><span id="rain">—</span><span class="unit">ADC</span></div>
             <div class="sub"><span>Raw analog</span></div>
           </div>
 
           <div class="card">
             <h3>UV</h3>
-            <div class="value">
-              <span id="uv">—</span><span class="unit">ADC</span>
-            </div>
+            <div class="value"><span id="uv">—</span><span class="unit">ADC</span></div>
             <div class="sub"><span>Raw analog</span></div>
           </div>
 
-          <!-- SGP41 (was missing for you; kept as card) -->
           <div class="card">
             <h3>SGP41 (Raw)</h3>
-            <div class="value">
-              <span id="voc">—</span><span class="unit">VOC</span>
-            </div>
-            <div class="sub">
-              <span>NOx: <b id="nox">—</b></span>
-            </div>
+            <div class="value"><span id="voc">—</span><span class="unit">VOC</span></div>
+            <div class="sub"><span>NOx: <b id="nox">—</b></span></div>
           </div>
 
           <div class="card wide">
@@ -401,21 +184,15 @@
             <div class="row">
               <div class="mini">
                 <div class="k">PM1.0</div>
-                <div class="v">
-                  <span id="pm1">—</span> <span class="unit">µg/m³</span>
-                </div>
+                <div class="v"><span id="pm1">—</span> <span class="unit">µg/m³</span></div>
               </div>
               <div class="mini">
                 <div class="k">PM2.5</div>
-                <div class="v">
-                  <span id="pm25">—</span> <span class="unit">µg/m³</span>
-                </div>
+                <div class="v"><span id="pm25">—</span> <span class="unit">µg/m³</span></div>
               </div>
               <div class="mini">
                 <div class="k">PM10</div>
-                <div class="v">
-                  <span id="pm10">—</span> <span class="unit">µg/m³</span>
-                </div>
+                <div class="v"><span id="pm10">—</span> <span class="unit">µg/m³</span></div>
               </div>
             </div>
           </div>
@@ -426,7 +203,7 @@
     </div>
 
     <script>
-      // ========= Firebase details (from your ESP32 code) =========
+      // ========= Firebase details =========
       const FIREBASE_API_KEY = "AIzaSyC6pyBexwauJDUu2WkmhvlTXQlV5SU__Ww";
       const DATABASE_URL =
         "https://kisha-86b74-default-rtdb.asia-southeast1.firebasedatabase.app";
@@ -435,6 +212,11 @@
       const DEVICE_ID = "device01";
       const LATEST_PATH = `/sensors/${DEVICE_ID}/latest`;
       const REFRESH_MS = 5000;
+
+      // ✅ TIME FIX:
+      // ESP32 NTPClient offset = 19800 seconds already added into timestamp.
+      // Browser toLocaleString again applies local timezone, so subtract 19800 sec here.
+      const ESP32_OFFSET_MS = 19800 * 1000;
 
       // ========= UI helpers =========
       const statusDot = document.getElementById("statusDot");
@@ -475,8 +257,7 @@
         return { avg: sum / valid.length, count: valid.length };
       }
 
-      // ========= ✅ VOC-only Air Quality (ADDED) =========
-      // Baseline via EMA (exponential moving average)
+      // ========= VOC-only Air Quality =========
       const EMA_ALPHA = 0.08;
       const MIN_SAMPLES_FOR_CONFIDENCE = 8;
 
@@ -485,7 +266,7 @@
 
       function isValidVOC(v) {
         const n = Number(v);
-        return Number.isFinite(n) && n > 0; // ignore 0
+        return Number.isFinite(n) && n > 0;
       }
 
       function updateVocBaseline(voc) {
@@ -503,26 +284,12 @@
         const b = Number(vocBaseline);
 
         if (!isValidVOC(v) || !Number.isFinite(b) || b <= 0) {
-          return {
-            label: "NO DATA",
-            cls: "warn",
-            text: "No data",
-            ratio: null,
-          };
+          return { label: "NO DATA", cls: "warn", text: "No data", ratio: null };
         }
 
         const ratio = v / b;
-
-        // Thresholds (tweakable)
-        if (ratio <= 1.2)
-          return { label: "GOOD", cls: "good", text: "Good air", ratio };
-        if (ratio <= 1.6)
-          return {
-            label: "MODERATE",
-            cls: "warn",
-            text: "Moderate air",
-            ratio,
-          };
+        if (ratio <= 1.2) return { label: "GOOD", cls: "good", text: "Good air", ratio };
+        if (ratio <= 1.6) return { label: "MODERATE", cls: "warn", text: "Moderate air", ratio };
         return { label: "BAD", cls: "bad", text: "Bad air", ratio };
       }
 
@@ -530,14 +297,10 @@
         updateVocBaseline(voc);
 
         setText("aqVoc", fmt0(voc));
-        setText(
-          "aqBase",
-          vocBaseline === null ? "—" : String(Math.round(vocBaseline)),
-        );
+        setText("aqBase", vocBaseline === null ? "—" : String(Math.round(vocBaseline)));
 
         const badge = document.getElementById("aqBadge");
 
-        // calibration stage
         if (vocSamples < MIN_SAMPLES_FOR_CONFIDENCE) {
           setText("aqText", "Calibrating…");
           setText("aqBadgeLabel", "CALIBRATING");
@@ -558,15 +321,13 @@
 
       // ========= Firebase REST auth =========
       async function signInAndGetIdToken() {
-        const url = `https://identitytoolkit.googleapis.com/v1/accounts:signInWithPassword?key=${encodeURIComponent(FIREBASE_API_KEY)}`;
+        const url = `https://identitytoolkit.googleapis.com/v1/accounts:signInWithPassword?key=${encodeURIComponent(
+          FIREBASE_API_KEY,
+        )}`;
         const res = await fetch(url, {
           method: "POST",
           headers: { "Content-Type": "application/json" },
-          body: JSON.stringify({
-            email: EMAIL,
-            password: PASSWORD,
-            returnSecureToken: true,
-          }),
+          body: JSON.stringify({ email: EMAIL, password: PASSWORD, returnSecureToken: true }),
         });
         const data = await res.json();
         if (!res.ok) throw new Error(data?.error?.message || "Auth failed");
@@ -587,44 +348,36 @@
         }
         setStatus("ok", "Live");
 
-        // ---- Avg Temp/Humidity (no sensor names) ----
+        // Avg Temp/Humidity
         const dhtTemp = d?.dht22?.temperature;
         const dhtHum = d?.dht22?.humidity;
 
-        // AHT10 swap fix only for average calculation
+        // AHT10 swap fix only for avg calculation
         const ahtTempFixed = d?.aht10?.humidity;
         const ahtHumFixed = d?.aht10?.temperature;
 
         const t = avgOfValid([dhtTemp, ahtTempFixed]);
         setText("avgTemp", t.avg === null ? "—" : t.avg.toFixed(1));
         setText("tempSources", t.count);
-        setText(
-          "tempStatus",
-          t.count === 0 ? "No valid data" : t.count === 1 ? "Partial" : "OK",
-        );
+        setText("tempStatus", t.count === 0 ? "No valid data" : t.count === 1 ? "Partial" : "OK");
 
         const h = avgOfValid([dhtHum, ahtHumFixed]);
         setText("avgHum", h.avg === null ? "—" : h.avg.toFixed(1));
         setText("humSources", h.count);
-        setText(
-          "humStatus",
-          h.count === 0 ? "No valid data" : h.count === 1 ? "Partial" : "OK",
-        );
+        setText("humStatus", h.count === 0 ? "No valid data" : h.count === 1 ? "Partial" : "OK");
 
-        // ---- Other sensors (old style) ----
+        // Other sensors
         setText("rain", fmt0(d?.rain));
         setText("uv", fmt0(d?.uv));
-
         setText("co2", fmt0(d?.mhz19c?.co2));
         setText("co2Temp", fmt1(d?.mhz19c?.temperature));
 
-        // ---- SGP41 readings ----
+        // SGP41
         const voc = d?.sgp41?.voc_raw;
         const nox = d?.sgp41?.nox_raw;
         setText("voc", fmt0(voc));
         setText("nox", fmt0(nox));
 
-        // ✅ Added: VOC-only air quality row
         renderVocAirQuality(voc);
 
         // PMS
@@ -632,12 +385,14 @@
         setText("pm25", fmt0(d?.pms?.pm2_5));
         setText("pm10", fmt0(d?.pms?.pm10));
 
-        // timestamp
+        // ✅ FIXED timestamp display
         const ts = Number(d.timestamp);
-        setText(
-          "lastUpdate",
-          Number.isFinite(ts) && ts > 0 ? new Date(ts).toLocaleString() : "—",
-        );
+        if (Number.isFinite(ts) && ts > 0) {
+          const corrected = new Date(ts - ESP32_OFFSET_MS);
+          setText("lastUpdate", corrected.toLocaleString());
+        } else {
+          setText("lastUpdate", "—");
+        }
       }
 
       let token = null;
