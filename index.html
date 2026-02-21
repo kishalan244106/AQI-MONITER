@@ -28,69 +28,233 @@
         min-height: 100vh;
         padding: 24px;
       }
-      .wrap { max-width: 1100px; margin: 0 auto; }
+      .wrap {
+        max-width: 1100px;
+        margin: 0 auto;
+      }
       header {
-        display: flex; gap: 16px; align-items: center; justify-content: space-between; flex-wrap: wrap;
-        padding: 18px; border: 1px solid var(--border); background: rgba(17, 26, 46, 0.72);
-        backdrop-filter: blur(10px); border-radius: 18px; box-shadow: 0 12px 30px rgba(0, 0, 0, 0.35);
+        display: flex;
+        gap: 16px;
+        align-items: center;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        padding: 18px;
+        border: 1px solid var(--border);
+        background: rgba(17, 26, 46, 0.72);
+        backdrop-filter: blur(10px);
+        border-radius: 18px;
+        box-shadow: 0 12px 30px rgba(0, 0, 0, 0.35);
       }
-      .title { display: flex; flex-direction: column; gap: 6px; }
-      .title h1 { font-size: 20px; }
-      .title p { color: var(--muted); font-size: 13px; }
-      .right { display: flex; gap: 10px; align-items: center; flex-wrap: wrap; }
+      .title {
+        display: flex;
+        flex-direction: column;
+        gap: 6px;
+      }
+      .title h1 {
+        font-size: 20px;
+      }
+      .title p {
+        color: var(--muted);
+        font-size: 13px;
+      }
+      .right {
+        display: flex;
+        gap: 10px;
+        align-items: center;
+        flex-wrap: wrap;
+      }
       .pill {
-        padding: 8px 12px; border-radius: 999px; border: 1px solid var(--border);
-        background: rgba(255, 255, 255, 0.04); color: var(--muted); font-size: 12px;
-        display: flex; gap: 8px; align-items: center;
+        padding: 8px 12px;
+        border-radius: 999px;
+        border: 1px solid var(--border);
+        background: rgba(255, 255, 255, 0.04);
+        color: var(--muted);
+        font-size: 12px;
+        display: flex;
+        gap: 8px;
+        align-items: center;
       }
-      .dot { width: 9px; height: 9px; border-radius: 50%; background: var(--warn); box-shadow: 0 0 0 4px rgba(255, 211, 106, 0.15); }
-      .dot.ok { background: var(--good); box-shadow: 0 0 0 4px rgba(44, 229, 167, 0.14); }
-      .dot.bad { background: var(--bad); box-shadow: 0 0 0 4px rgba(255, 107, 107, 0.14); }
+      .dot {
+        width: 9px;
+        height: 9px;
+        border-radius: 50%;
+        background: var(--warn);
+        box-shadow: 0 0 0 4px rgba(255, 211, 106, 0.15);
+      }
+      .dot.ok {
+        background: var(--good);
+        box-shadow: 0 0 0 4px rgba(44, 229, 167, 0.14);
+      }
+      .dot.bad {
+        background: var(--bad);
+        box-shadow: 0 0 0 4px rgba(255, 107, 107, 0.14);
+      }
 
-      main { margin-top: 18px; display: grid; gap: 14px; }
-      .grid { display: grid; grid-template-columns: repeat(12, 1fr); gap: 14px; }
+      main {
+        margin-top: 18px;
+        display: grid;
+        gap: 14px;
+      }
+      .grid {
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
+        gap: 14px;
+      }
       .card {
-        grid-column: span 4; border: 1px solid var(--border); background: rgba(17, 26, 46, 0.72);
-        backdrop-filter: blur(10px); border-radius: 18px; padding: 16px;
-        box-shadow: 0 10px 24px rgba(0, 0, 0, 0.28); position: relative; overflow: hidden;
+        grid-column: span 4;
+        border: 1px solid var(--border);
+        background: rgba(17, 26, 46, 0.72);
+        backdrop-filter: blur(10px);
+        border-radius: 18px;
+        padding: 16px;
+        box-shadow: 0 10px 24px rgba(0, 0, 0, 0.28);
+        position: relative;
+        overflow: hidden;
       }
       .card::before {
-        content: ""; position: absolute; inset: -1px;
+        content: "";
+        position: absolute;
+        inset: -1px;
         background: linear-gradient(120deg, rgba(87, 214, 255, 0.18), transparent 35%, rgba(44, 229, 167, 0.14));
-        opacity: 0.9; pointer-events: none;
+        opacity: 0.9;
+        pointer-events: none;
       }
-      .card > * { position: relative; }
-      .card h3 { font-size: 13px; color: var(--muted); font-weight: 650; margin-bottom: 10px; }
-      .value { font-size: 30px; font-weight: 800; display: flex; align-items: baseline; gap: 10px; }
-      .unit { font-size: 12px; color: var(--muted); font-weight: 650; }
-      .sub { margin-top: 10px; color: var(--muted); font-size: 12px; display: flex; justify-content: space-between; gap: 10px; flex-wrap: wrap; }
-      .sub b { color: var(--text); }
-      .wide { grid-column: span 12; }
-      .row { display: flex; gap: 12px; flex-wrap: wrap; }
-      .mini { flex: 1; min-width: 180px; padding: 12px 14px; border-radius: 14px; border: 1px solid var(--border); background: rgba(255, 255, 255, 0.04); }
-      .mini .k { font-size: 12px; color: var(--muted); margin-bottom: 6px; }
-      .mini .v { font-size: 18px; font-weight: 800; }
+      .card > * {
+        position: relative;
+      }
+      .card h3 {
+        font-size: 13px;
+        color: var(--muted);
+        font-weight: 650;
+        margin-bottom: 10px;
+      }
+      .value {
+        font-size: 30px;
+        font-weight: 800;
+        display: flex;
+        align-items: baseline;
+        gap: 10px;
+      }
+      .unit {
+        font-size: 12px;
+        color: var(--muted);
+        font-weight: 650;
+      }
+      .sub {
+        margin-top: 10px;
+        color: var(--muted);
+        font-size: 12px;
+        display: flex;
+        justify-content: space-between;
+        gap: 10px;
+        flex-wrap: wrap;
+      }
+      .sub b {
+        color: var(--text);
+      }
+      .wide {
+        grid-column: span 12;
+      }
+      .row {
+        display: flex;
+        gap: 12px;
+        flex-wrap: wrap;
+      }
+      .mini {
+        flex: 1;
+        min-width: 180px;
+        padding: 12px 14px;
+        border-radius: 14px;
+        border: 1px solid var(--border);
+        background: rgba(255, 255, 255, 0.04);
+      }
+      .mini .k {
+        font-size: 12px;
+        color: var(--muted);
+        margin-bottom: 6px;
+      }
+      .mini .v {
+        font-size: 18px;
+        font-weight: 800;
+      }
 
       .aq {
-        display: flex; gap: 12px; align-items: center; justify-content: space-between; flex-wrap: wrap;
-        padding: 14px 16px; border-radius: 18px; border: 1px solid var(--border);
-        background: rgba(17, 26, 46, 0.72); backdrop-filter: blur(10px); box-shadow: 0 10px 24px rgba(0, 0, 0, 0.28);
+        display: flex;
+        gap: 12px;
+        align-items: center;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        padding: 14px 16px;
+        border-radius: 18px;
+        border: 1px solid var(--border);
+        background: rgba(17, 26, 46, 0.72);
+        backdrop-filter: blur(10px);
+        box-shadow: 0 10px 24px rgba(0, 0, 0, 0.28);
+        margin-top: 16px;
       }
-      .aqLeft { display: flex; flex-direction: column; gap: 4px; }
-      .aqLeft .t { color: var(--muted); font-size: 12px; }
-      .aqLeft .big { font-size: 18px; font-weight: 850; }
-      .badge { padding: 8px 12px; border-radius: 999px; border: 1px solid var(--border); background: rgba(255, 255, 255, 0.04); font-size: 12px; font-weight: 850; display: flex; align-items: center; gap: 8px; }
-      .badgeDot { width: 10px; height: 10px; border-radius: 50%; }
-      .badge.good { color: var(--good); }
-      .badge.good .badgeDot { background: var(--good); box-shadow: 0 0 0 4px rgba(44, 229, 167, 0.14); }
-      .badge.warn { color: var(--warn); }
-      .badge.warn .badgeDot { background: var(--warn); box-shadow: 0 0 0 4px rgba(255, 211, 106, 0.14); }
-      .badge.bad { color: var(--bad); }
-      .badge.bad .badgeDot { background: var(--bad); box-shadow: 0 0 0 4px rgba(255, 107, 107, 0.14); }
+      .aqLeft {
+        display: flex;
+        flex-direction: column;
+        gap: 4px;
+      }
+      .aqLeft .t {
+        color: var(--muted);
+        font-size: 12px;
+      }
+      .aqLeft .big {
+        font-size: 18px;
+        font-weight: 850;
+      }
+      .badge {
+        padding: 8px 12px;
+        border-radius: 999px;
+        border: 1px solid var(--border);
+        background: rgba(255, 255, 255, 0.04);
+        font-size: 12px;
+        font-weight: 850;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+      }
+      .badgeDot {
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+      }
+      .badge.good {
+        color: var(--good);
+      }
+      .badge.good .badgeDot {
+        background: var(--good);
+        box-shadow: 0 0 0 4px rgba(44, 229, 167, 0.14);
+      }
+      .badge.warn {
+        color: var(--warn);
+      }
+      .badge.warn .badgeDot {
+        background: var(--warn);
+        box-shadow: 0 0 0 4px rgba(255, 211, 106, 0.14);
+      }
+      .badge.bad {
+        color: var(--bad);
+      }
+      .badge.bad .badgeDot {
+        background: var(--bad);
+        box-shadow: 0 0 0 4px rgba(255, 107, 107, 0.14);
+      }
 
-      footer { margin-top: 2px; color: var(--muted); font-size: 12px; text-align: center; }
-      @media (max-width: 900px) { .card { grid-column: span 6; } }
-      @media (max-width: 620px) { .card { grid-column: span 12; } }
+      footer {
+        margin-top: 2px;
+        color: var(--muted);
+        font-size: 12px;
+        text-align: center;
+      }
+      @media (max-width: 900px) {
+        .card { grid-column: span 6; }
+      }
+      @media (max-width: 620px) {
+        .card { grid-column: span 12; }
+      }
     </style>
   </head>
 
@@ -108,7 +272,7 @@
         </div>
       </header>
 
-      <div class="aq" style="margin-top: 16px">
+      <div class="aq">
         <div class="aqLeft">
           <div class="t">Air Quality (VOC only)</div>
           <div class="big" id="aqText">—</div>
@@ -213,9 +377,8 @@
       const LATEST_PATH = `/sensors/${DEVICE_ID}/latest`;
       const REFRESH_MS = 5000;
 
-      // ✅ TIME FIX:
-      // ESP32 NTPClient offset = 19800 seconds already added into timestamp.
-      // Browser toLocaleString again applies local timezone, so subtract 19800 sec here.
+      // ✅ If ESP32 code uses NTPClient offset=19800, timestamp is already shifted.
+      // Browser toLocaleString also applies timezone => we remove 19800 sec to avoid double offset.
       const ESP32_OFFSET_MS = 19800 * 1000;
 
       // ========= UI helpers =========
@@ -245,7 +408,6 @@
         document.getElementById(id).textContent = val;
       }
 
-      // ignore 0 because ESP32 sets 0 on invalid reads
       function isValidReading(x) {
         const n = Number(x);
         return Number.isFinite(n) && n !== 0;
@@ -268,7 +430,6 @@
         const n = Number(v);
         return Number.isFinite(n) && n > 0;
       }
-
       function updateVocBaseline(voc) {
         const v = Number(voc);
         if (!isValidVOC(v)) return;
@@ -278,7 +439,6 @@
 
         vocSamples++;
       }
-
       function classifyVOC(voc) {
         const v = Number(voc);
         const b = Number(vocBaseline);
@@ -292,7 +452,6 @@
         if (ratio <= 1.6) return { label: "MODERATE", cls: "warn", text: "Moderate air", ratio };
         return { label: "BAD", cls: "bad", text: "Bad air", ratio };
       }
-
       function renderVocAirQuality(voc) {
         updateVocBaseline(voc);
 
@@ -341,6 +500,20 @@
         return await res.json();
       }
 
+      function formatLastUpdate(rawTs) {
+        let ts = Number(rawTs);
+        if (!Number.isFinite(ts) || ts <= 0) return "—";
+
+        // ✅ seconds/ms auto-detect
+        // seconds ~ 10 digits (< 1e12), ms ~ 13 digits
+        if (ts < 1_000_000_000_000) ts = ts * 1000;
+
+        // ✅ remove ESP32 added offset (avoid double offset in browser)
+        ts = ts - ESP32_OFFSET_MS;
+
+        return new Date(ts).toLocaleString();
+      }
+
       function render(d) {
         if (!d) {
           setStatus("bad", "No data");
@@ -348,11 +521,11 @@
         }
         setStatus("ok", "Live");
 
-        // Avg Temp/Humidity
+        // Avg Temp/Humidity (no sensor names)
         const dhtTemp = d?.dht22?.temperature;
         const dhtHum = d?.dht22?.humidity;
 
-        // AHT10 swap fix only for avg calculation
+        // AHT10 swap fix only for average calculation
         const ahtTempFixed = d?.aht10?.humidity;
         const ahtHumFixed = d?.aht10?.temperature;
 
@@ -372,7 +545,7 @@
         setText("co2", fmt0(d?.mhz19c?.co2));
         setText("co2Temp", fmt1(d?.mhz19c?.temperature));
 
-        // SGP41
+        // SGP41 readings
         const voc = d?.sgp41?.voc_raw;
         const nox = d?.sgp41?.nox_raw;
         setText("voc", fmt0(voc));
@@ -385,14 +558,8 @@
         setText("pm25", fmt0(d?.pms?.pm2_5));
         setText("pm10", fmt0(d?.pms?.pm10));
 
-        // ✅ FIXED timestamp display
-        const ts = Number(d.timestamp);
-        if (Number.isFinite(ts) && ts > 0) {
-          const corrected = new Date(ts - ESP32_OFFSET_MS);
-          setText("lastUpdate", corrected.toLocaleString());
-        } else {
-          setText("lastUpdate", "—");
-        }
+        // ✅ FIXED timestamp (1970 + timezone issues)
+        setText("lastUpdate", formatLastUpdate(d?.timestamp));
       }
 
       let token = null;
